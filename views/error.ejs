@@ -1,0 +1,15 @@
+<% layout("/layouts/boilerplate.ejs") %>
+
+<div class="container mt-5">
+  <div class="alert alert-danger border border-danger shadow-sm p-4 rounded-4">
+    <h1 class="display-5 text-danger">
+      <i class="fas fa-exclamation-triangle me-2"></i>
+      <%= err.statusCode || 500 %> Error
+    </h1>
+    <hr>
+    <p class="lead"><%= err.message || "Something went wrong. Please try again later." %></p>
+    <a href="/listings" class="btn btn-outline-danger mt-3">
+      <i class="fas fa-arrow-left"></i> Back to Listings
+    </a>
+  </div>
+</div>
